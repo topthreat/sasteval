@@ -1,0 +1,42 @@
+# Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.logs
+.mvn/
+mvnw
+mvnw.cmd
+
+# .NET
+bin/
+obj/
+publish/
+*.dll
+*.pdb
+*.exe
+*.nupkg
+*.user
+*.suo
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+.vs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+out/
+build/
+dist/
+
+# Scanner output
+results/

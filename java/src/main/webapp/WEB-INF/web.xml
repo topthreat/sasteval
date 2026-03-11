@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <display-name>SAST Eval - Java Benchmark</display-name>
+
+    <!-- Easy tier -->
+    <servlet>
+        <servlet-name>SqlInjectionDirect</servlet-name>
+        <servlet-class>com.sasteval.vuln.easy.SqlInjectionDirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SqlInjectionDirect</servlet-name>
+        <url-pattern>/vuln/easy/sqli</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>XssDirect</servlet-name>
+        <servlet-class>com.sasteval.vuln.easy.XssDirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>XssDirect</servlet-name>
+        <url-pattern>/vuln/easy/xss</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>XssStoredDirect</servlet-name>
+        <servlet-class>com.sasteval.vuln.easy.XssStoredDirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>XssStoredDirect</servlet-name>
+        <url-pattern>/vuln/easy/xss-stored</url-pattern>
+    </servlet-mapping>
+
+    <!-- Medium tier -->
+    <servlet>
+        <servlet-name>PathTraversalService</servlet-name>
+        <servlet-class>com.sasteval.vuln.medium.PathTraversalService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PathTraversalService</servlet-name>
+        <url-pattern>/vuln/medium/path-traversal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SsrfService</servlet-name>
+        <servlet-class>com.sasteval.vuln.medium.SsrfService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SsrfService</servlet-name>
+        <url-pattern>/vuln/medium/ssrf</url-pattern>
+    </servlet-mapping>
+
+    <!-- Hard tier -->
+    <servlet>
+        <servlet-name>DeserializationEndpoint</servlet-name>
+        <servlet-class>com.sasteval.vuln.hard.DeserializationEndpoint</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeserializationEndpoint</servlet-name>
+        <url-pattern>/vuln/hard/deserialize</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>IdorController</servlet-name>
+        <servlet-class>com.sasteval.vuln.hard.IdorController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IdorController</servlet-name>
+        <url-pattern>/vuln/hard/idor</url-pattern>
+    </servlet-mapping>
+
+    <!-- AI-Legacy tier -->
+    <servlet>
+        <servlet-name>AuthBypass</servlet-name>
+        <servlet-class>com.sasteval.vuln.ailegacy.AuthBypass</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AuthBypass</servlet-name>
+        <url-pattern>/vuln/ailegacy/auth-bypass</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InsecureRandom</servlet-name>
+        <servlet-class>com.sasteval.vuln.ailegacy.InsecureRandom</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsecureRandom</servlet-name>
+        <url-pattern>/vuln/ailegacy/insecure-random</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WeakHashing</servlet-name>
+        <servlet-class>com.sasteval.vuln.ailegacy.WeakHashing</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WeakHashing</servlet-name>
+        <url-pattern>/vuln/ailegacy/weak-hash</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HardcodedSecrets</servlet-name>
+        <servlet-class>com.sasteval.vuln.ailegacy.HardcodedSecrets</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HardcodedSecrets</servlet-name>
+        <url-pattern>/vuln/ailegacy/hardcoded-secrets</url-pattern>
+    </servlet-mapping>
+
+    <!-- Safe (false-positive seeds) -->
+    <servlet>
+        <servlet-name>SafeHtmlOutput</servlet-name>
+        <servlet-class>com.sasteval.safe.SafeHtmlOutput</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SafeHtmlOutput</servlet-name>
+        <url-pattern>/safe/html</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SafeSqlQuery</servlet-name>
+        <servlet-class>com.sasteval.safe.SafeSqlQuery</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SafeSqlQuery</servlet-name>
+        <url-pattern>/safe/sql</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InternalDataQuery</servlet-name>
+        <servlet-class>com.sasteval.safe.InternalDataQuery</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InternalDataQuery</servlet-name>
+        <url-pattern>/safe/internal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeadCodeVuln</servlet-name>
+        <servlet-class>com.sasteval.safe.DeadCodeVuln</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeadCodeVuln</servlet-name>
+        <url-pattern>/safe/deadcode</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FrameworkEscaped</servlet-name>
+        <servlet-class>com.sasteval.safe.FrameworkEscaped</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FrameworkEscaped</servlet-name>
+        <url-pattern>/safe/escaped</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SafePathTraversal</servlet-name>
+        <servlet-class>com.sasteval.safe.SafePathTraversal</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SafePathTraversal</servlet-name>
+        <url-pattern>/safe/path-traversal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SafeSsrfAllowlist</servlet-name>
+        <servlet-class>com.sasteval.safe.SafeSsrfAllowlist</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SafeSsrfAllowlist</servlet-name>
+        <url-pattern>/safe/ssrf</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SafeIdorOwnershipCheck</servlet-name>
+        <servlet-class>com.sasteval.safe.SafeIdorOwnershipCheck</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SafeIdorOwnershipCheck</servlet-name>
+        <url-pattern>/safe/idor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SafeAuthzFromSession</servlet-name>
+        <servlet-class>com.sasteval.safe.SafeAuthzFromSession</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SafeAuthzFromSession</servlet-name>
+        <url-pattern>/safe/authz</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SafeRegexAllowlist</servlet-name>
+        <servlet-class>com.sasteval.safe.SafeRegexAllowlist</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SafeRegexAllowlist</servlet-name>
+        <url-pattern>/safe/regex</url-pattern>
+    </servlet-mapping>
+
+    <!-- New Easy tier -->
+    <servlet>
+        <servlet-name>CommandInjectionDirect</servlet-name>
+        <servlet-class>com.sasteval.vuln.easy.CommandInjectionDirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CommandInjectionDirect</servlet-name>
+        <url-pattern>/vuln/easy/cmdi</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>XxeDirect</servlet-name>
+        <servlet-class>com.sasteval.vuln.easy.XxeDirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>XxeDirect</servlet-name>
+        <url-pattern>/vuln/easy/xxe</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OpenRedirectDirect</servlet-name>
+        <servlet-class>com.sasteval.vuln.easy.OpenRedirectDirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OpenRedirectDirect</servlet-name>
+        <url-pattern>/vuln/easy/redirect</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogInjectionDirect</servlet-name>
+        <servlet-class>com.sasteval.vuln.easy.LogInjectionDirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogInjectionDirect</servlet-name>
+        <url-pattern>/vuln/easy/log-injection</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ErrorInfoLeakDirect</servlet-name>
+        <servlet-class>com.sasteval.vuln.easy.ErrorInfoLeakDirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ErrorInfoLeakDirect</servlet-name>
+        <url-pattern>/vuln/easy/error-info</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CleartextStorageDirect</servlet-name>
+        <servlet-class>com.sasteval.vuln.easy.CleartextStorageDirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CleartextStorageDirect</servlet-name>
+        <url-pattern>/vuln/easy/cleartext</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WeakCipherDirect</servlet-name>
+        <servlet-class>com.sasteval.vuln.easy.WeakCipherDirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WeakCipherDirect</servlet-name>
+        <url-pattern>/vuln/easy/weak-cipher</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InsecureCookieDirect</servlet-name>
+        <servlet-class>com.sasteval.vuln.easy.InsecureCookieDirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsecureCookieDirect</servlet-name>
+        <url-pattern>/vuln/easy/insecure-cookie</url-pattern>
+    </servlet-mapping>
+
+    <!-- New Medium tier -->
+    <servlet>
+        <servlet-name>CommandInjectionService</servlet-name>
+        <servlet-class>com.sasteval.vuln.medium.CommandInjectionService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CommandInjectionService</servlet-name>
+        <url-pattern>/vuln/medium/cmdi</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SqlInjectionMultiStep</servlet-name>
+        <servlet-class>com.sasteval.vuln.medium.SqlInjectionMultiStep</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SqlInjectionMultiStep</servlet-name>
+        <url-pattern>/vuln/medium/sqli-multi</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>XssViaHeader</servlet-name>
+        <servlet-class>com.sasteval.vuln.medium.XssViaHeader</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>XssViaHeader</servlet-name>
+        <url-pattern>/vuln/medium/xss-header</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LdapInjection</servlet-name>
+        <servlet-class>com.sasteval.vuln.medium.LdapInjection</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LdapInjection</servlet-name>
+        <url-pattern>/vuln/medium/ldap</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>XPathInjection</servlet-name>
+        <servlet-class>com.sasteval.vuln.medium.XPathInjection</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>XPathInjection</servlet-name>
+        <url-pattern>/vuln/medium/xpath</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegexDos</servlet-name>
+        <servlet-class>com.sasteval.vuln.medium.RegexDos</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegexDos</servlet-name>
+        <url-pattern>/vuln/medium/redos</url-pattern>
+    </servlet-mapping>
+
+    <!-- New Hard tier -->
+    <servlet>
+        <servlet-name>SqlInjectionCrossFile</servlet-name>
+        <servlet-class>com.sasteval.vuln.hard.SqlInjectionCrossFile</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SqlInjectionCrossFile</servlet-name>
+        <url-pattern>/vuln/hard/sqli-crossfile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CommandInjectionCrossFile</servlet-name>
+        <servlet-class>com.sasteval.vuln.hard.CommandInjectionCrossFile</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CommandInjectionCrossFile</servlet-name>
+        <url-pattern>/vuln/hard/cmdi-crossfile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>XxeCrossFile</servlet-name>
+        <servlet-class>com.sasteval.vuln.hard.XxeCrossFile</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>XxeCrossFile</servlet-name>
+        <url-pattern>/vuln/hard/xxe-crossfile</url-pattern>
+    </servlet-mapping>
+
+    <!-- New AI-Legacy tier -->
+    <servlet>
+        <servlet-name>NullCheckBypass</servlet-name>
+        <servlet-class>com.sasteval.vuln.ailegacy.NullCheckBypass</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NullCheckBypass</servlet-name>
+        <url-pattern>/vuln/ailegacy/null-bypass</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TrustBoundaryViolation</servlet-name>
+        <servlet-class>com.sasteval.vuln.ailegacy.TrustBoundaryViolation</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TrustBoundaryViolation</servlet-name>
+        <url-pattern>/vuln/ailegacy/trust-boundary</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UnvalidatedArrayIndex</servlet-name>
+        <servlet-class>com.sasteval.vuln.ailegacy.UnvalidatedArrayIndex</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UnvalidatedArrayIndex</servlet-name>
+        <url-pattern>/vuln/ailegacy/array-index</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InsecureTlsConfig</servlet-name>
+        <servlet-class>com.sasteval.vuln.ailegacy.InsecureTlsConfig</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsecureTlsConfig</servlet-name>
+        <url-pattern>/vuln/ailegacy/insecure-tls</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CookieInUrl</servlet-name>
+        <servlet-class>com.sasteval.vuln.ailegacy.CookieInUrl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookieInUrl</servlet-name>
+        <url-pattern>/vuln/ailegacy/cookie-url</url-pattern>
+    </servlet-mapping>
+
+    <!-- New Safe (false-positive seeds) -->
+    <servlet>
+        <servlet-name>SafeCommandExec</servlet-name>
+        <servlet-class>com.sasteval.safe.SafeCommandExec</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SafeCommandExec</servlet-name>
+        <url-pattern>/safe/command</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SafeRedirect</servlet-name>
+        <servlet-class>com.sasteval.safe.SafeRedirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SafeRedirect</servlet-name>
+        <url-pattern>/safe/redirect</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SafeXmlParsing</servlet-name>
+        <servlet-class>com.sasteval.safe.SafeXmlParsing</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SafeXmlParsing</servlet-name>
+        <url-pattern>/safe/xml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SafeLogging</servlet-name>
+        <servlet-class>com.sasteval.safe.SafeLogging</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SafeLogging</servlet-name>
+        <url-pattern>/safe/logging</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SafeCrypto</servlet-name>
+        <servlet-class>com.sasteval.safe.SafeCrypto</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SafeCrypto</servlet-name>
+        <url-pattern>/safe/crypto</url-pattern>
+    </servlet-mapping>
+
+    <!-- SCA Reachability -->
+    <servlet>
+        <servlet-name>LogbackReachable</servlet-name>
+        <servlet-class>com.sasteval.sca.LogbackReachable</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogbackReachable</servlet-name>
+        <url-pattern>/sca/logback</url-pattern>
+    </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,107 @@
+id,language,cwe,category,file,line,severity,tp_or_tn,tier,reachable,description
+SAST-JAVA-001,java,CWE-89,SAST,java/src/main/java/com/sasteval/vuln/easy/SqlInjectionDirect.java,39,HIGH,TP,easy,,Direct string concatenation of user input into SQL query via executeQuery()
+SAST-JAVA-002,java,CWE-79,SAST,java/src/main/java/com/sasteval/vuln/easy/XssDirect.java,23,HIGH,TP,easy,,User input reflected directly into HTML response without encoding
+SAST-JAVA-003,java,CWE-79,SAST,java/src/main/java/com/sasteval/vuln/easy/XssStoredDirect.java,58,HIGH,TP,easy,,Stored comment from database rendered as HTML without encoding
+SAST-JAVA-004,java,CWE-22,SAST,java/src/main/java/com/sasteval/vuln/medium/PathTraversalService.java,34,HIGH,TP,medium,,User-controlled file path passed to FileInputStream without canonicalization
+SAST-JAVA-005,java,CWE-918,SAST,java/src/main/java/com/sasteval/vuln/medium/SsrfService.java,21,HIGH,TP,medium,,User-supplied URL passed to openConnection() without validation
+SAST-JAVA-006,java,CWE-502,SAST,java/src/main/java/com/sasteval/vuln/hard/DeserializationHandler.java,16,CRITICAL,TP,hard,,Arbitrary bytes deserialized via readObject() with no type filter
+SAST-JAVA-007,java,CWE-639,SAST,java/src/main/java/com/sasteval/vuln/hard/IdorController.java,57,HIGH,TP,hard,,Horizontal IDOR: session user exists but another user's password-bearing profile is returned based only on requested userId
+SAST-JAVA-008,java,CWE-639,SAST,java/src/main/java/com/sasteval/vuln/hard/IdorController.java,88,HIGH,TP,hard,,Vertical IDOR: client-supplied role is trusted to authorize a destructive delete operation
+SAST-JAVA-009,java,CWE-306,SAST,java/src/main/java/com/sasteval/vuln/ailegacy/AuthBypass.java,37,HIGH,TP,ai,,Admin-only delete operation relies on client-supplied isAdmin parameter instead of server-side auth state
+SAST-JAVA-010,java,CWE-330,SAST,java/src/main/java/com/sasteval/vuln/ailegacy/InsecureRandom.java,18,MEDIUM,TP,ai,,Math.random() used to generate security token
+SAST-JAVA-011,java,CWE-328,SAST,java/src/main/java/com/sasteval/vuln/ailegacy/WeakHashing.java,19,MEDIUM,TP,ai,,MD5 used for password hashing via MessageDigest.getInstance
+SAST-JAVA-012,java,CWE-798,SAST,java/src/main/java/com/sasteval/vuln/ailegacy/HardcodedSecrets.java,18,HIGH,TP,ai,,JWT signing secret hardcoded as constant in source code
+SAST-JAVA-013,java,CWE-798,SAST,java/src/main/java/com/sasteval/vuln/ailegacy/HardcodedSecrets.java,19,HIGH,TP,ai,,API key hardcoded as constant in source code
+SAST-JAVA-014,java,CWE-89,SAST,java/src/main/java/com/sasteval/vuln/ailegacy/AiGeneratedDao.java,36,HIGH,TP,ai,,AI-generated DAO uses string concatenation in SQL passed to executeQuery()
+SAST-JAVA-015,java,CWE-78,SAST,java/src/main/java/com/sasteval/vuln/easy/CommandInjectionDirect.java,25,HIGH,TP,easy,,User input concatenated into OS command passed to Runtime.exec()
+SAST-JAVA-016,java,CWE-611,SAST,java/src/main/java/com/sasteval/vuln/easy/XxeDirect.java,28,HIGH,TP,easy,,XML parsed with default DocumentBuilderFactory settings allowing external entities via parse()
+SAST-JAVA-017,java,CWE-601,SAST,java/src/main/java/com/sasteval/vuln/easy/OpenRedirectDirect.java,22,HIGH,TP,easy,,Unvalidated user-supplied URL passed to sendRedirect()
+SAST-JAVA-018,java,CWE-117,SAST,java/src/main/java/com/sasteval/vuln/easy/LogInjectionDirect.java,25,MEDIUM,TP,easy,,Unsanitized user input written directly to logger.info()
+SAST-JAVA-019,java,CWE-209,SAST,java/src/main/java/com/sasteval/vuln/easy/ErrorInfoLeakDirect.java,32,MEDIUM,TP,easy,,Full stack trace written to HTTP response via e.printStackTrace()
+SAST-JAVA-020,java,CWE-312,SAST,java/src/main/java/com/sasteval/vuln/easy/CleartextStorageDirect.java,32,HIGH,TP,easy,,Credit card number stored as plaintext in database via ps.setString()
+SAST-JAVA-021,java,CWE-327,SAST,java/src/main/java/com/sasteval/vuln/easy/WeakCipherDirect.java,22,MEDIUM,TP,easy,,DES with ECB mode used via Cipher.getInstance()
+SAST-JAVA-022,java,CWE-614,SAST,java/src/main/java/com/sasteval/vuln/easy/InsecureCookieDirect.java,27,MEDIUM,TP,easy,,Session cookie added without Secure or HttpOnly flags via addCookie()
+SAST-JAVA-023,java,CWE-78,SAST,java/src/main/java/com/sasteval/vuln/medium/CommandInjectionService.java,19,HIGH,TP,medium,,User input flows through helper method into ProcessBuilder.start()
+SAST-JAVA-024,java,CWE-89,SAST,java/src/main/java/com/sasteval/vuln/medium/SqlInjectionMultiStep.java,44,HIGH,TP,medium,,Multi-param cross-method SQL injection via executeQuery()
+SAST-JAVA-025,java,CWE-79,SAST,java/src/main/java/com/sasteval/vuln/medium/XssViaHeader.java,24,HIGH,TP,medium,,HTTP Referer header reflected in HTML response via println()
+SAST-JAVA-026,java,CWE-90,SAST,java/src/main/java/com/sasteval/vuln/medium/LdapInjection.java,33,HIGH,TP,medium,,User input concatenated into LDAP search filter passed to ctx.search()
+SAST-JAVA-027,java,CWE-643,SAST,java/src/main/java/com/sasteval/vuln/medium/XPathInjection.java,32,HIGH,TP,medium,,User input concatenated into XPath expression passed to xpath.evaluate()
+SAST-JAVA-028,java,CWE-1333,SAST,java/src/main/java/com/sasteval/vuln/medium/RegexDos.java,27,MEDIUM,TP,medium,,User-supplied regex pattern compiled without safeguards via Pattern.compile()
+SAST-JAVA-029,java,CWE-89,SAST,java/src/main/java/com/sasteval/vuln/hard/QueryExecutor.java,20,HIGH,TP,hard,,Cross-file SQL injection sink: executeQuery() on tainted SQL string
+SAST-JAVA-030,java,CWE-78,SAST,java/src/main/java/com/sasteval/vuln/hard/CommandRunner.java,13,HIGH,TP,hard,,Cross-file command injection sink: Runtime.exec() on tainted command string
+SAST-JAVA-031,java,CWE-611,SAST,java/src/main/java/com/sasteval/vuln/hard/XmlProcessor.java,19,HIGH,TP,hard,,Cross-file XXE sink: DocumentBuilder.parse() with insecure default settings
+SAST-JAVA-032,java,CWE-754,SAST,java/src/main/java/com/sasteval/vuln/ailegacy/NullCheckBypass.java,25,HIGH,TP,ai,,Null token triggers fail-open exception handling that grants access to an admin-only delete operation
+SAST-JAVA-033,java,CWE-501,SAST,java/src/main/java/com/sasteval/vuln/ailegacy/TrustBoundaryViolation.java,38,HIGH,TP,ai,,User-controlled role is stored in session and immediately reused to authorize a destructive delete operation
+SAST-JAVA-034,java,CWE-129,SAST,java/src/main/java/com/sasteval/vuln/ailegacy/UnvalidatedArrayIndex.java,38,HIGH,TP,ai,,User-controlled index selects and executes a dangerous internal admin action
+SAST-JAVA-035,java,CWE-295,SAST,java/src/main/java/com/sasteval/vuln/ailegacy/InsecureTlsConfig.java,25,HIGH,TP,ai,,Trust-all TrustManager accepts any certificate without validation
+SAST-JAVA-036,java,CWE-598,SAST,java/src/main/java/com/sasteval/vuln/ailegacy/CookieInUrl.java,24,HIGH,TP,ai,,Session token exposed in redirect URL query string via sendRedirect()
+SAST-JAVA-TN-001,java,CWE-79,SAST,java/src/main/java/com/sasteval/safe/SafeHtmlOutput.java,26,NONE,TN,easy,,User input sanitized via SanitizerUtil before HTML output
+SAST-JAVA-TN-002,java,CWE-89,SAST,java/src/main/java/com/sasteval/safe/SafeSqlQuery.java,39,NONE,TN,easy,,PreparedStatement with parameterized query prevents SQL injection
+SAST-JAVA-TN-003,java,CWE-89,SAST,java/src/main/java/com/sasteval/safe/InternalDataQuery.java,43,NONE,TN,medium,,SQL built from hardcoded internal config values not user input
+SAST-JAVA-TN-004,java,CWE-89,SAST,java/src/main/java/com/sasteval/safe/DeadCodeVuln.java,41,NONE,TN,medium,,Public handler uses PreparedStatement; vulnerable code is unreachable dead code
+SAST-JAVA-TN-005,java,CWE-79,SAST,java/src/main/java/com/sasteval/safe/FrameworkEscaped.java,26,NONE,TN,medium,,User input sanitized via OWASP HTML Sanitizer before output
+SAST-JAVA-TN-006,java,CWE-78,SAST,java/src/main/java/com/sasteval/safe/SafeCommandExec.java,24,NONE,TN,easy,,Hardcoded command executed with no user input
+SAST-JAVA-TN-007,java,CWE-601,SAST,java/src/main/java/com/sasteval/safe/SafeRedirect.java,34,NONE,TN,easy,,Redirect only allowed to whitelisted page paths
+SAST-JAVA-TN-008,java,CWE-611,SAST,java/src/main/java/com/sasteval/safe/SafeXmlParsing.java,33,NONE,TN,easy,,External entities and DTDs disabled before XML parsing
+SAST-JAVA-TN-009,java,CWE-117,SAST,java/src/main/java/com/sasteval/safe/SafeLogging.java,34,NONE,TN,easy,,User input sanitized with newlines stripped before logging
+SAST-JAVA-TN-010,java,CWE-327,SAST,java/src/main/java/com/sasteval/safe/SafeCrypto.java,33,NONE,TN,easy,,AES-256 with GCM mode and proper key generation
+SAST-JAVA-TN-011,java,CWE-22,SAST,java/src/main/java/com/sasteval/safe/SafePathTraversal.java,45,NONE,TN,medium,,Canonical path is enforced under a fixed base directory before FileInputStream reads the file
+SAST-JAVA-TN-012,java,CWE-918,SAST,java/src/main/java/com/sasteval/safe/SafeSsrfAllowlist.java,46,NONE,TN,medium,,Outbound request is restricted to HTTPS and an allowlisted host before openConnection()
+SAST-JAVA-TN-013,java,CWE-639,SAST,java/src/main/java/com/sasteval/safe/SafeIdorOwnershipCheck.java,57,NONE,TN,hard,,Server-side ownership or trusted admin session role is enforced before returning the requested profile
+SAST-JAVA-TN-014,java,CWE-306,SAST,java/src/main/java/com/sasteval/safe/SafeAuthzFromSession.java,44,NONE,TN,hard,,Privileged delete is authorized using trusted server-side session role rather than client input
+SAST-JAVA-TN-015,java,CWE-1333,SAST,java/src/main/java/com/sasteval/safe/SafeRegexAllowlist.java,41,NONE,TN,medium,,Regex comes from a fixed allowlist of pre-approved patterns before matcher execution
+SCA-JAVA-001,java,SCA,SCA,java/src/main/java/com/sasteval/sca/LogbackReachable.java,0,HIGH,TP,sca,true,CVE-2024-12798 in logback-core has a plausible reachable call path via JoranConfigurator.doConfigure() and exploitability depends on attacker-controlled config content/path
+SCA-JAVA-002,java,SCA,SCA,java/src/main/java/com/sasteval/sca/Lz4Unreachable.java,0,LOW,TP,sca,false,CVE-2025-12183 in lz4-java is unreachable in this benchmark because no lz4 methods are called
+SAST-DOTNET-001,dotnet,CWE-89,SAST,dotnet/Vuln/Easy/SqlInjectionDirect.cs,27,HIGH,TP,easy,,Direct string concatenation of user input into SQL query via ExecuteReader()
+SAST-DOTNET-002,dotnet,CWE-79,SAST,dotnet/Vuln/Easy/XssDirect.cs,18,HIGH,TP,easy,,User input directly interpolated into HTML response via Results.Content()
+SAST-DOTNET-003,dotnet,CWE-79,SAST,dotnet/Vuln/Easy/XssStoredDirect.cs,45,HIGH,TP,easy,,Stored comment from database rendered as raw HTML without encoding
+SAST-DOTNET-004,dotnet,CWE-22,SAST,dotnet/Vuln/Medium/PathTraversalService.cs,28,HIGH,TP,medium,,User-controlled file path passed to File.ReadAllBytes() without validation
+SAST-DOTNET-005,dotnet,CWE-918,SAST,dotnet/Vuln/Medium/SsrfService.cs,12,HIGH,TP,medium,,User-supplied URL passed to GetStringAsync() without validation
+SAST-DOTNET-006,dotnet,CWE-502,SAST,dotnet/Vuln/Hard/DeserializationHandler.cs,22,CRITICAL,TP,hard,,BinaryFormatter.Deserialize() called with no type binder on untrusted data
+SAST-DOTNET-007,dotnet,CWE-639,SAST,dotnet/Vuln/Hard/IdorController.cs,34,HIGH,TP,hard,,Horizontal IDOR: session user exists but another user's password-bearing profile is returned based only on requested userId
+SAST-DOTNET-008,dotnet,CWE-639,SAST,dotnet/Vuln/Hard/IdorController.cs,69,HIGH,TP,hard,,Vertical IDOR: client-supplied role is trusted to authorize a destructive delete operation
+SAST-DOTNET-009,dotnet,CWE-306,SAST,dotnet/Vuln/AiLegacy/AuthBypass.cs,23,HIGH,TP,ai,,Admin-only delete operation relies on client-supplied isAdmin query parameter instead of server-side auth state
+SAST-DOTNET-010,dotnet,CWE-330,SAST,dotnet/Vuln/AiLegacy/InsecureRandom.cs,13,MEDIUM,TP,ai,,System.Random used to generate security token instead of cryptographic RNG
+SAST-DOTNET-011,dotnet,CWE-328,SAST,dotnet/Vuln/AiLegacy/WeakHashing.cs,22,MEDIUM,TP,ai,,MD5.Create() used for password hashing
+SAST-DOTNET-012,dotnet,CWE-798,SAST,dotnet/Vuln/AiLegacy/HardcodedSecrets.cs,9,HIGH,TP,ai,,JWT signing secret hardcoded as const string in source code
+SAST-DOTNET-013,dotnet,CWE-798,SAST,dotnet/Vuln/AiLegacy/HardcodedSecrets.cs,12,HIGH,TP,ai,,API key hardcoded as const string in source code
+SAST-DOTNET-014,dotnet,CWE-89,SAST,dotnet/Vuln/AiLegacy/AiGeneratedDao.cs,26,HIGH,TP,ai,,AI-generated DAO uses string interpolation in SQL INSERT via ExecuteNonQuery()
+SAST-DOTNET-015,dotnet,CWE-78,SAST,dotnet/Vuln/Easy/CommandInjectionDirect.cs,20,HIGH,TP,easy,,User input concatenated into OS command passed to Process.Start()
+SAST-DOTNET-016,dotnet,CWE-611,SAST,dotnet/Vuln/Easy/XxeDirect.cs,28,HIGH,TP,easy,,XML parsed with DTD processing enabled and XmlUrlResolver via XmlReader.Create()
+SAST-DOTNET-017,dotnet,CWE-601,SAST,dotnet/Vuln/Easy/OpenRedirectDirect.cs,18,HIGH,TP,easy,,Unvalidated user-supplied URL passed to Results.Redirect()
+SAST-DOTNET-018,dotnet,CWE-117,SAST,dotnet/Vuln/Easy/LogInjectionDirect.cs,18,MEDIUM,TP,easy,,Unsanitized user input written directly to Console.WriteLine()
+SAST-DOTNET-019,dotnet,CWE-209,SAST,dotnet/Vuln/Easy/ErrorInfoLeakDirect.cs,25,MEDIUM,TP,easy,,Full exception details returned to client via Results.Text(ex.ToString())
+SAST-DOTNET-020,dotnet,CWE-312,SAST,dotnet/Vuln/Easy/CleartextStorageDirect.cs,23,HIGH,TP,easy,,Credit card number stored as plaintext in database
+SAST-DOTNET-021,dotnet,CWE-327,SAST,dotnet/Vuln/Easy/WeakCipherDirect.cs,16,MEDIUM,TP,easy,,DES cipher with hardcoded key used via DES.Create()
+SAST-DOTNET-022,dotnet,CWE-614,SAST,dotnet/Vuln/Easy/InsecureCookieDirect.cs,13,MEDIUM,TP,easy,,Session cookie set without Secure or HttpOnly flags via Cookies.Append()
+SAST-DOTNET-023,dotnet,CWE-78,SAST,dotnet/Vuln/Medium/CommandInjectionService.cs,13,HIGH,TP,medium,,User input flows through helper method into Process.Start()
+SAST-DOTNET-024,dotnet,CWE-89,SAST,dotnet/Vuln/Medium/SqlInjectionMultiStep.cs,32,HIGH,TP,medium,,Multi-param cross-method SQL injection via ExecuteReader()
+SAST-DOTNET-025,dotnet,CWE-79,SAST,dotnet/Vuln/Medium/XssViaHeader.cs,18,HIGH,TP,medium,,HTTP Referer header reflected in HTML response via Results.Content()
+SAST-DOTNET-026,dotnet,CWE-90,SAST,dotnet/Vuln/Medium/LdapInjection.cs,18,HIGH,TP,medium,,User input concatenated into LDAP filter passed to DirectorySearcher
+SAST-DOTNET-027,dotnet,CWE-643,SAST,dotnet/Vuln/Medium/XPathInjection.cs,27,HIGH,TP,medium,,User input concatenated into XPath expression passed to SelectSingleNode()
+SAST-DOTNET-028,dotnet,CWE-1333,SAST,dotnet/Vuln/Medium/RegexDos.cs,21,MEDIUM,TP,medium,,User-supplied regex pattern compiled without safeguards via new Regex()
+SAST-DOTNET-029,dotnet,CWE-89,SAST,dotnet/Vuln/Hard/QueryExecutor.cs,17,HIGH,TP,hard,,Cross-file SQL injection sink: ExecuteReader() on tainted SQL string
+SAST-DOTNET-030,dotnet,CWE-78,SAST,dotnet/Vuln/Hard/CommandRunner.cs,13,HIGH,TP,hard,,Cross-file command injection sink: Process.Start() on tainted command string
+SAST-DOTNET-031,dotnet,CWE-611,SAST,dotnet/Vuln/Hard/XmlProcessor.cs,19,HIGH,TP,hard,,Cross-file XXE sink: XmlReader.Create() with insecure DTD and resolver settings
+SAST-DOTNET-032,dotnet,CWE-754,SAST,dotnet/Vuln/AiLegacy/NullCheckBypass.cs,22,HIGH,TP,ai,,Null token triggers fail-open exception handling that grants access to an admin-only delete operation
+SAST-DOTNET-033,dotnet,CWE-501,SAST,dotnet/Vuln/AiLegacy/TrustBoundaryViolation.cs,30,HIGH,TP,ai,,User-controlled role is stored in session and immediately reused to authorize a destructive delete operation
+SAST-DOTNET-034,dotnet,CWE-129,SAST,dotnet/Vuln/AiLegacy/UnvalidatedArrayIndex.cs,32,HIGH,TP,ai,,User-controlled index selects and executes a dangerous internal admin action
+SAST-DOTNET-035,dotnet,CWE-295,SAST,dotnet/Vuln/AiLegacy/InsecureTlsConfig.cs,20,HIGH,TP,ai,,Trust-all ServerCertificateCustomValidationCallback bypasses certificate validation
+SAST-DOTNET-036,dotnet,CWE-598,SAST,dotnet/Vuln/AiLegacy/CookieInUrl.cs,13,HIGH,TP,ai,,Session token exposed in redirect URL query string via Results.Redirect()
+SAST-DOTNET-TN-001,dotnet,CWE-79,SAST,dotnet/Safe/SafeHtmlOutput.cs,23,NONE,TN,easy,,User input sanitized via SanitizerUtil before HTML output
+SAST-DOTNET-TN-002,dotnet,CWE-89,SAST,dotnet/Safe/SafeSqlQuery.cs,27,NONE,TN,easy,,Parameterized SQLiteCommand query prevents SQL injection
+SAST-DOTNET-TN-003,dotnet,CWE-89,SAST,dotnet/Safe/InternalDataQuery.cs,31,NONE,TN,medium,,SQL built from hardcoded internal config values not user input
+SAST-DOTNET-TN-004,dotnet,CWE-89,SAST,dotnet/Safe/DeadCodeVuln.cs,28,NONE,TN,medium,,Public handler uses parameterized query; vulnerable code is unreachable dead code
+SAST-DOTNET-TN-005,dotnet,CWE-79,SAST,dotnet/Safe/FrameworkEscaped.cs,26,NONE,TN,medium,,User input sanitized via HtmlSanitizer before output
+SAST-DOTNET-TN-006,dotnet,CWE-78,SAST,dotnet/Safe/SafeCommandExec.cs,14,NONE,TN,easy,,Hardcoded command executed with no user input
+SAST-DOTNET-TN-007,dotnet,CWE-601,SAST,dotnet/Safe/SafeRedirect.cs,30,NONE,TN,easy,,Redirect only allowed to whitelisted page paths
+SAST-DOTNET-TN-008,dotnet,CWE-611,SAST,dotnet/Safe/SafeXmlParsing.cs,28,NONE,TN,easy,,DTD processing explicitly prohibited preventing XXE
+SAST-DOTNET-TN-009,dotnet,CWE-117,SAST,dotnet/Safe/SafeLogging.cs,24,NONE,TN,easy,,User input sanitized with newlines stripped before logging
+SAST-DOTNET-TN-010,dotnet,CWE-327,SAST,dotnet/Safe/SafeCrypto.cs,22,NONE,TN,easy,,AES with randomly generated key and IV
+SAST-DOTNET-TN-011,dotnet,CWE-22,SAST,dotnet/Safe/SafePathTraversal.cs,29,NONE,TN,medium,,Canonical path is enforced under a fixed base directory before File.ReadAllBytes() reads the file
+SAST-DOTNET-TN-012,dotnet,CWE-918,SAST,dotnet/Safe/SafeSsrfAllowlist.cs,34,NONE,TN,medium,,Outbound request is restricted to HTTPS and an allowlisted host before HttpClient.SendAsync()
+SAST-DOTNET-TN-013,dotnet,CWE-639,SAST,dotnet/Safe/SafeIdorOwnershipCheck.cs,34,NONE,TN,hard,,Server-side ownership or trusted admin session role is enforced before returning the requested profile
+SAST-DOTNET-TN-014,dotnet,CWE-306,SAST,dotnet/Safe/SafeAuthzFromSession.cs,27,NONE,TN,hard,,Privileged delete is authorized using trusted server-side session role rather than client input
+SAST-DOTNET-TN-015,dotnet,CWE-1333,SAST,dotnet/Safe/SafeRegexAllowlist.cs,29,NONE,TN,medium,,Regex comes from a fixed allowlist of pre-approved patterns before IsMatch() execution
+SCA-DOTNET-001,dotnet,SCA,SCA,dotnet/Sca/MsBuildUnreachable.cs,0,LOW,TP,sca,false,CVE-2025-55247 affects Microsoft.Build but this sample does not exercise the documented DownloadFile/Linux temp-dir condition and should not be scored as reachable
+SCA-DOTNET-002,dotnet,SCA,SCA,dotnet/Sca/NuGetPackagingUnreachable.cs,0,LOW,TP,sca,false,CVE-2024-0057 / GHSA-68w7-72jg-6qpp in NuGet.Packaging is unreachable in this benchmark because no NuGet.Packaging APIs are called
