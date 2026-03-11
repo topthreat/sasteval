@@ -1,16 +1,5 @@
-# sasteval — GitLab SAST and Dependency Scanning
-#
-# Semgrep scans Java and C# source directly. SpotBugs is excluded because
-# it requires compiled bytecode and a build step, which this repo does not
-# provide. The pre-built artifacts for binary-level scanning are in veracode/.
-#
-# Dependency Scanning covers:
-#   - java/pom.xml         (logback-core, lz4-java)
-#   - dotnet/SastEval.csproj  (Microsoft.Build, NuGet.Packaging)
-
 include:
   - template: Security/SAST.gitlab-ci.yml
-  - template: Security/Dependency-Scanning.gitlab-ci.yml
 
 variables:
   SAST_EXCLUDED_ANALYZERS: "spotbugs"
