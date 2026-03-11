@@ -1,16 +1,16 @@
 # sasteval — GitLab SAST and Dependency Scanning
 #
-# This file activates GitLab's built-in SAST and Dependency Scanning for the
-# sasteval benchmark repository. No build step or local tooling is required.
+# Semgrep scans Java and C# source directly. SpotBugs is excluded because
+# it requires compiled bytecode and a build step, which this repo does not
+# provide. The pre-built artifacts for binary-level scanning are in veracode/.
 #
-# GitLab SAST will scan:
-#   - java/src/ using Semgrep (and GitLab Advanced SAST on Ultimate tier)
-#   - dotnet/ using Semgrep (and GitLab Advanced SAST on Ultimate tier)
-#
-# Dependency Scanning will scan:
-#   - java/pom.xml    for vulnerable Maven dependencies
-#   - dotnet/SastEval.csproj  for vulnerable NuGet dependencies
+# Dependency Scanning covers:
+#   - java/pom.xml         (logback-core, lz4-java)
+#   - dotnet/SastEval.csproj  (Microsoft.Build, NuGet.Packaging)
 
 include:
   - template: Security/SAST.gitlab-ci.yml
   - template: Security/Dependency-Scanning.gitlab-ci.yml
+
+variables:
+  SAST_EXCLUDED_ANALYZERS: "spotbugs"
