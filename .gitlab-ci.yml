@@ -1,7 +1,0 @@
-semgrep:
-  image: returntocorp/semgrep
-  script:
-    - semgrep ci --sarif --output semgrep.sarif || true
-  artifacts:
-    reports:
-      sast: semgrep.sarif
