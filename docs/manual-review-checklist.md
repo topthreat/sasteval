@@ -10,9 +10,9 @@ Goal:
 
 Reference:
 
-- [manual-review-report.md](/home/tallenz/code/sasteval/docs/manual-review-report.md)
-- [VULNERABILITIES.md](/home/tallenz/code/sasteval/VULNERABILITIES.md)
-- [expectedresults.csv](/home/tallenz/code/sasteval/ground-truth/expectedresults.csv)
+- [manual-review-report.md](manual-review-report.md)
+- [VULNERABILITIES.md](../VULNERABILITIES.md)
+- [expectedresults.csv](../ground-truth/expectedresults.csv)
 
 ## Quick Triage
 

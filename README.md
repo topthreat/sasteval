@@ -1,114 +1,109 @@
-# sasteval — SAST/SCA Security Benchmark
+# sasteval
+
+**WARNING: This repository contains intentionally vulnerable code.**
+
+This repo contains known-bad code including SQL injection, XSS, path traversal, SSRF,
+unsafe deserialization, auth bypass, hardcoded secrets, and vulnerable dependencies.
+Do not deploy this to any server. Do not run this in any environment you care about.
+This is a static scanning target, not an application. Running it exposes you to RCE,
+data exfiltration, and account takeover.
 
 ---
 
-> **WARNING: THIS APPLICATION IS INTENTIONALLY VULNERABLE.**
->
-> This repository contains code with **known security vulnerabilities** including
-> SQL Injection, XSS, Path Traversal, SSRF, Unsafe Deserialization, IDOR,
-> Authentication Bypass, Hardcoded Secrets, and vulnerable third-party dependencies.
->
-> **NEVER deploy this application to any network-accessible server.**
-> **NEVER use this code in production.**
->
-> This is a **static scanning target only** — designed to be read by SAST/SCA tools,
-> not executed by servers. Running this application exposes you to Remote Code
-> Execution (RCE), data exfiltration, and account takeover.
+## What it is
 
----
+sasteval is a ground-truth benchmark for evaluating SAST and SCA scanners. Point your
+scanner at the source or compiled artifacts and compare findings against the documented
+vulnerability catalog.
 
-## Purpose
+It is not a training app like WebGoat or DVWA. There is no web UI to log into.
+Scan it and compare results.
 
-sasteval is a ground-truth benchmark for evaluating Static Application Security
-Testing (SAST) and Software Composition Analysis (SCA) scanners. Unlike training
-applications (WebGoat, DVWA), this project is a **passive scan target** — point your
-scanner at the source or compiled artifacts and compare what it finds against the
-documented vulnerability catalog.
+- Every finding maps to a CWE ID, file, and line number
+- Three taint-flow difficulty tiers: easy (same-function), medium (cross-method), hard (cross-file)
+- 30 false-positive seeds: secure patterns using the same dangerous APIs as the vulnerable counterparts
+- AI-legacy tier: patterns commonly introduced by LLM-generated code
+- SCA reachability pairs: one reachable CVE, one unreachable, per language
+- 106 total findings across Java and .NET
 
-- **Validated CWE mappings** — every vulnerability mapped to a CWE ID, file, and line number
-- **Difficulty stratification** — easy (same-function), medium (cross-method), and hard (cross-file) taint flows
-- **False-positive seeds** — secure patterns that mimic vulnerabilities to measure scanner precision
-- **AI-mistake simulation** — common LLM coding errors (auth bypass, weak hashing, hardcoded secrets)
-- **SCA reachability testing** — both reachable and unreachable vulnerable dependencies
-- **Deterministic results** — no race conditions or environment-dependent flaws
-
-## Directory Structure
+## Directory structure
 
 ```
 sasteval/
-├── README.md                  # This file
-├── LICENSE                    # Apache 2.0
-├── VULNERABILITIES.md         # Complete listing of all intentional flaws
+├── README.md
+├── LICENSE
+├── VULNERABILITIES.md         # Full finding catalog
+├── VERACODE.md                # Veracode upload instructions
 ├── java/                      # Java (Maven) benchmark module
 │   ├── pom.xml
 │   └── src/main/java/com/sasteval/
-│       ├── vuln/easy/         # CWE-89, CWE-79 (direct taint)
-│       ├── vuln/medium/       # CWE-22, CWE-918 (cross-method)
-│       ├── vuln/hard/         # CWE-502, CWE-639 (cross-file)
-│       ├── vuln/ailegacy/     # AI-induced mistakes
-│       ├── safe/              # False-positive seeds (true negatives)
+│       ├── vuln/easy/         # Direct taint (CWE-89, CWE-79, ...)
+│       ├── vuln/medium/       # Cross-method taint
+│       ├── vuln/hard/         # Cross-file taint chains
+│       ├── vuln/ailegacy/     # LLM-generated mistake patterns
+│       ├── safe/              # True-negative seeds
 │       ├── sca/               # SCA reachability demos
-│       └── util/              # Shared DB and sanitizer utilities
+│       └── util/
 ├── dotnet/                    # .NET (C#) benchmark module
 │   ├── SastEval.sln
 │   ├── SastEval.csproj
 │   └── ...                    # Mirrors Java structure
-├── ground-truth/              # Expected findings catalog
-│   ├── expectedresults.csv    # CWE, file, line, TP/TN mapping (all 96 findings)
-│   └── expectedresults.strict.csv  # Core findings (excludes business-logic cases)
-├── scripts/                   # Build helpers for binary-level scanners
+├── ground-truth/
+│   ├── expectedresults.csv         # 106 findings: CWE, file, line, severity, tier
+│   └── expectedresults.strict.csv  # Core taint findings only
+├── veracode/                  # Pre-built artifacts for Veracode Upload and Scan
+│   ├── sasteval-java-1.0.0.war
+│   └── sasteval-dotnet-net8-debug.zip
+├── results/
+│   └── free-scanners/         # Semgrep, SpotBugs, Trivy reference output
+├── scripts/
 │   ├── build-java.sh
-│   └── build-dotnet.sh
+│   ├── build-dotnet.sh
+│   └── package-veracode.sh
 └── docs/
-    ├── manual-review-report.md     # Justification for every finding
-    ├── manual-review-checklist.md  # Reviewer workflow template
-    └── tooling-validation.md       # Cross-tool signal notes
+    ├── manual-review-report.md
+    ├── manual-review-checklist.md
+    └── tooling-validation.md
 ```
 
-## Scanning (Source-Level)
+## Scanning (source-level)
 
-Point your SAST/SCA scanner at the repository root or individual language directories:
+Point your scanner at the repo root or a language directory:
 
 ```bash
-# Examples (substitute your scanner)
 semgrep scan --sarif -o results.sarif java/
 snyk code test java/ --sarif-file-output=results.sarif
 codeql database create db --language=java --source-root=java/
 ```
 
-## Veracode Upload Artifacts
+GitLab SAST and Dependency Scanning run automatically on push via `.gitlab-ci.yml`.
 
-This repo includes ready-to-upload artifacts in [veracode/README.md](veracode/README.md).
-For the exact Veracode workflow and upload steps, see [VERACODE.md](VERACODE.md).
-Users do not need to install Java, Maven, or .NET just to submit the benchmark to Veracode.
+## Veracode
 
-Use these files directly:
+Pre-built artifacts are included. No local Java or .NET installation required.
 
 - `veracode/sasteval-java-1.0.0.war`
 - `veracode/sasteval-dotnet-net8-debug.zip`
 
-Upload them as separate Veracode application profiles for the cleanest module separation.
+Upload each as a separate Veracode application profile. See [VERACODE.md](VERACODE.md) for
+the full walkthrough.
 
-## Building (Binary-Level)
+## Comparing results
 
-For maintainers who want to regenerate the packaged artifacts:
+After scanning, compare output against `ground-truth/expectedresults.csv`.
 
-```bash
-# Rebuilds Java and .NET artifacts and stages them under veracode/
-./scripts/package-veracode.sh
-```
+For notes on which findings are strong cross-tool signals and which are business-logic
+dependent, see [docs/tooling-validation.md](docs/tooling-validation.md).
 
-## Comparing Results
+For justification of every individual finding, see [docs/manual-review-report.md](docs/manual-review-report.md).
 
-After scanning, compare your tool's output against `ground-truth/expectedresults.csv`
-which documents every intentional vulnerability and true-negative seed with CWE, file,
-line number, severity, and difficulty tier.
+## Disclaimer
 
-For notes on which findings are strong cross-tool signals versus business-logic cases
-that tools handle inconsistently, see [docs/tooling-validation.md](docs/tooling-validation.md).
-
-For detailed justification of every finding, see [docs/manual-review-report.md](docs/manual-review-report.md).
+This repository is provided for security research and scanner evaluation only.
+The vulnerabilities are intentional and documented. Do not use this code in any
+production system or deploy it to any accessible network. The authors are not
+responsible for any damage caused by misuse of this repository.
 
 ## License
 
-Apache 2.0 — see [LICENSE](LICENSE).
+MIT - see [LICENSE](LICENSE).

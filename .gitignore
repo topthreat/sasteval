@@ -9,6 +9,9 @@ target/
 mvnw
 mvnw.cmd
 
+# Keep pre-built Veracode artifacts
+!veracode/*.war
+
 # .NET
 bin/
 obj/
@@ -38,5 +41,5 @@ out/
 build/
 dist/
 
-# Scanner output
-results/
+# Scanner output (keep reference results in-repo)
+!results/

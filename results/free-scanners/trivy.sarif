@@ -1,0 +1,1194 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/main/sarif-2.1/schema/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "fullName": "Trivy Vulnerability Scanner",
+          "informationUri": "https://github.com/aquasecurity/trivy",
+          "name": "Trivy",
+          "rules": [
+            {
+              "id": "CVE-2024-29992",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Azure Identity Library for .NET Information Disclosure Vulnerability"
+              },
+              "fullDescription": {
+                "text": "Azure Identity Library for .NET Information Disclosure Vulnerability"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-29992",
+              "help": {
+                "text": "Vulnerability CVE-2024-29992\nSeverity: MEDIUM\nPackage: Azure.Identity\nFixed Version: 1.11.0\nLink: [CVE-2024-29992](https://avd.aquasec.com/nvd/cve-2024-29992)\nAzure Identity Library for .NET Information Disclosure Vulnerability",
+                "markdown": "**Vulnerability CVE-2024-29992**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|Azure.Identity|1.11.0|[CVE-2024-29992](https://avd.aquasec.com/nvd/cve-2024-29992)|\n\nAzure Identity Library for .NET Information Disclosure Vulnerability"
+              },
+              "properties": {
+                "cvssv3_baseScore": 5.5,
+                "cvssv3_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-35255",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "azure-identity: Azure Identity Libraries Elevation of Privilege Vulnerability in github.com/Azure/azure-sdk-for-go/sdk/azidentity"
+              },
+              "fullDescription": {
+                "text": "Azure Identity Libraries and Microsoft Authentication Library Elevation of Privilege Vulnerability"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-35255",
+              "help": {
+                "text": "Vulnerability CVE-2024-35255\nSeverity: MEDIUM\nPackage: Microsoft.Identity.Client\nFixed Version: 4.60.4, 4.61.3\nLink: [CVE-2024-35255](https://avd.aquasec.com/nvd/cve-2024-35255)\nAzure Identity Libraries and Microsoft Authentication Library Elevation of Privilege Vulnerability",
+                "markdown": "**Vulnerability CVE-2024-35255**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|Microsoft.Identity.Client|4.60.4, 4.61.3|[CVE-2024-35255](https://avd.aquasec.com/nvd/cve-2024-35255)|\n\nAzure Identity Libraries and Microsoft Authentication Library Elevation of Privilege Vulnerability"
+              },
+              "properties": {
+                "cvssv3_baseScore": 5.5,
+                "cvssv3_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                "cvssv40_baseScore": 6.8,
+                "cvssv40_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-25543",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "HtmlSanitizer has a bypass via template tag"
+              },
+              "fullDescription": {
+                "text": "HtmlSanitizer is a .NET library for cleaning HTML fragments and documents from constructs that can lead to XSS attacks. Prior to versions 9.0.892 and 9.1.893-beta, if the template tag is allowed, its contents are not sanitized. The template tag is a special tag that does not usually render its contents, unless the shadowrootmode attribute is set to open or closed. This issue has been patched in versions 9.0.892 and 9.1.893-beta."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-25543",
+              "help": {
+                "text": "Vulnerability CVE-2026-25543\nSeverity: MEDIUM\nPackage: HtmlSanitizer\nFixed Version: 9.0.892, 9.1.893-beta\nLink: [CVE-2026-25543](https://avd.aquasec.com/nvd/cve-2026-25543)\nHtmlSanitizer is a .NET library for cleaning HTML fragments and documents from constructs that can lead to XSS attacks. Prior to versions 9.0.892 and 9.1.893-beta, if the template tag is allowed, its contents are not sanitized. The template tag is a special tag that does not usually render its contents, unless the shadowrootmode attribute is set to open or closed. This issue has been patched in versions 9.0.892 and 9.1.893-beta.",
+                "markdown": "**Vulnerability CVE-2026-25543**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|HtmlSanitizer|9.0.892, 9.1.893-beta|[CVE-2026-25543](https://avd.aquasec.com/nvd/cve-2026-25543)|\n\nHtmlSanitizer is a .NET library for cleaning HTML fragments and documents from constructs that can lead to XSS attacks. Prior to versions 9.0.892 and 9.1.893-beta, if the template tag is allowed, its contents are not sanitized. The template tag is a special tag that does not usually render its contents, unless the shadowrootmode attribute is set to open or closed. This issue has been patched in versions 9.0.892 and 9.1.893-beta."
+              },
+              "properties": {
+                "cvssv40_baseScore": 6.3,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-55247",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "dotnet: .NET Denial of Service Vulnerability"
+              },
+              "fullDescription": {
+                "text": "Improper link resolution before file access ('link following') in .NET allows an authorized attacker to elevate privileges locally."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2025-55247",
+              "help": {
+                "text": "Vulnerability CVE-2025-55247\nSeverity: HIGH\nPackage: Microsoft.Build\nFixed Version: 18.0.0-preview-25476-107, 17.14.28, 17.12.50, 17.11.48, 17.10.46, 17.8.43\nLink: [CVE-2025-55247](https://avd.aquasec.com/nvd/cve-2025-55247)\nImproper link resolution before file access ('link following') in .NET allows an authorized attacker to elevate privileges locally.",
+                "markdown": "**Vulnerability CVE-2025-55247**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|Microsoft.Build|18.0.0-preview-25476-107, 17.14.28, 17.12.50, 17.11.48, 17.10.46, 17.8.43|[CVE-2025-55247](https://avd.aquasec.com/nvd/cve-2025-55247)|\n\nImproper link resolution before file access ('link following') in .NET allows an authorized attacker to elevate privileges locally."
+              },
+              "properties": {
+                "cvssv3_baseScore": 7.3,
+                "cvssv3_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+                "precision": "very-high",
+                "security-severity": "7.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-27086",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "MSAL.NET applications targeting Xamarin Android and .NET Android (MAUI) susceptible to local denial of service"
+              },
+              "fullDescription": {
+                "text": "The MSAL library enabled acquisition of security tokens to call protected APIs. MSAL.NET applications targeting Xamarin Android and .NET Android (e.g., MAUI) using the library from versions 4.48.0 to 4.60.0 are impacted by a low severity vulnerability.   \nA malicious application running on a customer Android device    can cause local denial of service against applications that were built using MSAL.NET for authentication on the same device (i.e., prevent the user of the legitimate application from logging in) due to incorrect activity export configuration. MSAL.NET version 4.60.1 includes the fix.  As a workaround, a developer may explicitly mark the MSAL.NET activity non-exported."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-27086",
+              "help": {
+                "text": "Vulnerability CVE-2024-27086\nSeverity: LOW\nPackage: Microsoft.Identity.Client\nFixed Version: 4.59.1, 4.60.3\nLink: [CVE-2024-27086](https://avd.aquasec.com/nvd/cve-2024-27086)\nThe MSAL library enabled acquisition of security tokens to call protected APIs. MSAL.NET applications targeting Xamarin Android and .NET Android (e.g., MAUI) using the library from versions 4.48.0 to 4.60.0 are impacted by a low severity vulnerability.   \nA malicious application running on a customer Android device    can cause local denial of service against applications that were built using MSAL.NET for authentication on the same device (i.e., prevent the user of the legitimate application from logging in) due to incorrect activity export configuration. MSAL.NET version 4.60.1 includes the fix.  As a workaround, a developer may explicitly mark the MSAL.NET activity non-exported.",
+                "markdown": "**Vulnerability CVE-2024-27086**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|Microsoft.Identity.Client|4.59.1, 4.60.3|[CVE-2024-27086](https://avd.aquasec.com/nvd/cve-2024-27086)|\n\nThe MSAL library enabled acquisition of security tokens to call protected APIs. MSAL.NET applications targeting Xamarin Android and .NET Android (e.g., MAUI) using the library from versions 4.48.0 to 4.60.0 are impacted by a low severity vulnerability.   \nA malicious application running on a customer Android device    can cause local denial of service against applications that were built using MSAL.NET for authentication on the same device (i.e., prevent the user of the legitimate application from logging in) due to incorrect activity export configuration. MSAL.NET version 4.60.1 includes the fix.  As a workaround, a developer may explicitly mark the MSAL.NET activity non-exported."
+              },
+              "properties": {
+                "cvssv3_baseScore": 3.9,
+                "cvssv3_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:L",
+                "precision": "very-high",
+                "security-severity": "3.9",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-0057",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "dotnet: X509 Certificates - Validation Bypass across Azure"
+              },
+              "fullDescription": {
+                "text": "NET, .NET Framework, and Visual Studio Security Feature Bypass Vulnerability"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-0057",
+              "help": {
+                "text": "Vulnerability CVE-2024-0057\nSeverity: CRITICAL\nPackage: NuGet.Packaging\nFixed Version: 5.11.6, 6.0.6, 6.3.4, 6.4.3, 6.6.2, 6.7.1, 6.8.1\nLink: [CVE-2024-0057](https://avd.aquasec.com/nvd/cve-2024-0057)\nNET, .NET Framework, and Visual Studio Security Feature Bypass Vulnerability",
+                "markdown": "**Vulnerability CVE-2024-0057**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|CRITICAL|NuGet.Packaging|5.11.6, 6.0.6, 6.3.4, 6.4.3, 6.6.2, 6.7.1, 6.8.1|[CVE-2024-0057](https://avd.aquasec.com/nvd/cve-2024-0057)|\n\nNET, .NET Framework, and Visual Studio Security Feature Bypass Vulnerability"
+              },
+              "properties": {
+                "cvssv3_baseScore": 9.1,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "precision": "very-high",
+                "security-severity": "9.1",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "CRITICAL"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-0056",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "dotnet: Information Disclosure: MD.SqlClient(MDS) & System.data.SQLClient (SDS)"
+              },
+              "fullDescription": {
+                "text": "Microsoft.Data.SqlClient and System.Data.SqlClient SQL Data Provider Security Feature Bypass Vulnerability"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-0056",
+              "help": {
+                "text": "Vulnerability CVE-2024-0056\nSeverity: HIGH\nPackage: System.Data.SqlClient\nFixed Version: 4.8.6\nLink: [CVE-2024-0056](https://avd.aquasec.com/nvd/cve-2024-0056)\nMicrosoft.Data.SqlClient and System.Data.SqlClient SQL Data Provider Security Feature Bypass Vulnerability",
+                "markdown": "**Vulnerability CVE-2024-0056**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|System.Data.SqlClient|4.8.6|[CVE-2024-0056](https://avd.aquasec.com/nvd/cve-2024-0056)|\n\nMicrosoft.Data.SqlClient and System.Data.SqlClient SQL Data Provider Security Feature Bypass Vulnerability"
+              },
+              "properties": {
+                "cvssv3_baseScore": 8.7,
+                "cvssv3_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
+                "precision": "very-high",
+                "security-severity": "8.7",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-41064",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": ".NET Information Disclosure Vulnerability"
+              },
+              "fullDescription": {
+                "text": ".NET Framework Information Disclosure Vulnerability"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-41064",
+              "help": {
+                "text": "Vulnerability CVE-2022-41064\nSeverity: MEDIUM\nPackage: System.Data.SqlClient\nFixed Version: 4.8.5\nLink: [CVE-2022-41064](https://avd.aquasec.com/nvd/cve-2022-41064)\n.NET Framework Information Disclosure Vulnerability",
+                "markdown": "**Vulnerability CVE-2022-41064**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|System.Data.SqlClient|4.8.5|[CVE-2022-41064](https://avd.aquasec.com/nvd/cve-2022-41064)|\n\n.NET Framework Information Disclosure Vulnerability"
+              },
+              "properties": {
+                "cvssv3_baseScore": 5.8,
+                "cvssv3_vector": "CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N",
+                "precision": "very-high",
+                "security-severity": "5.8",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-12798",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "logback-core: arbitrary code execution via JaninoEventEvaluator"
+              },
+              "fullDescription": {
+                "text": "ACE vulnerability in JaninoEventEvaluator  by QOS.CH logback-core\n      upto including version 0.1 to 1.3.14 and\u00a01.4.0 to 1.5.12 in Java applications allows\n      attacker to execute arbitrary code by compromising an existing\n      logback configuration file or by injecting an environment variable\n      before program execution.\n\n\n\n\n\nMalicious logback configuration files can allow the attacker to execute \narbitrary code using the JaninoEventEvaluator extension.\n\n\n\nA successful attack requires the user to have write access to a \nconfiguration file. Alternatively, the attacker could inject a malicious \nenvironment variable pointing to a malicious configuration file. In both \ncases, the attack requires existing privilege."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-12798",
+              "help": {
+                "text": "Vulnerability CVE-2024-12798\nSeverity: MEDIUM\nPackage: ch.qos.logback:logback-core\nFixed Version: 1.5.13, 1.3.15\nLink: [CVE-2024-12798](https://avd.aquasec.com/nvd/cve-2024-12798)\nACE vulnerability in JaninoEventEvaluator  by QOS.CH logback-core\n      upto including version 0.1 to 1.3.14 and\u00a01.4.0 to 1.5.12 in Java applications allows\n      attacker to execute arbitrary code by compromising an existing\n      logback configuration file or by injecting an environment variable\n      before program execution.\n\n\n\n\n\nMalicious logback configuration files can allow the attacker to execute \narbitrary code using the JaninoEventEvaluator extension.\n\n\n\nA successful attack requires the user to have write access to a \nconfiguration file. Alternatively, the attacker could inject a malicious \nenvironment variable pointing to a malicious configuration file. In both \ncases, the attack requires existing privilege.",
+                "markdown": "**Vulnerability CVE-2024-12798**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|ch.qos.logback:logback-core|1.5.13, 1.3.15|[CVE-2024-12798](https://avd.aquasec.com/nvd/cve-2024-12798)|\n\nACE vulnerability in JaninoEventEvaluator  by QOS.CH logback-core\n      upto including version 0.1 to 1.3.14 and\u00a01.4.0 to 1.5.12 in Java applications allows\n      attacker to execute arbitrary code by compromising an existing\n      logback configuration file or by injecting an environment variable\n      before program execution.\n\n\n\n\n\nMalicious logback configuration files can allow the attacker to execute \narbitrary code using the JaninoEventEvaluator extension.\n\n\n\nA successful attack requires the user to have write access to a \nconfiguration file. Alternatively, the attacker could inject a malicious \nenvironment variable pointing to a malicious configuration file. In both \ncases, the attack requires existing privilege."
+              },
+              "properties": {
+                "cvssv40_baseScore": 5.9,
+                "cvssv40_vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:L/VI:H/VA:L/SC:L/SI:H/SA:L/RE:L/U:Clear",
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-11226",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "ch.qos.logback/logback-core: Conditional abitrary code execution in logback-core"
+              },
+              "fullDescription": {
+                "text": "ACE vulnerability in conditional configuration file processing  by QOS.CH logback-core up to and including version 1.5.18 in Java applications, allows an attacker to execute arbitrary code by compromising an existing logback configuration file or by injecting an environment variable before program execution.\n\n\n\nA successful attack requires the presence of Janino library and Spring Framework to be present on the user's class path. In addition, the attacker must\u00a0 have write access to a \nconfiguration file. Alternatively, the attacker could inject a malicious \nenvironment variable pointing to a malicious configuration file. In both \ncases, the attack requires existing privilege."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2025-11226",
+              "help": {
+                "text": "Vulnerability CVE-2025-11226\nSeverity: MEDIUM\nPackage: ch.qos.logback:logback-core\nFixed Version: 1.5.19, 1.3.16\nLink: [CVE-2025-11226](https://avd.aquasec.com/nvd/cve-2025-11226)\nACE vulnerability in conditional configuration file processing  by QOS.CH logback-core up to and including version 1.5.18 in Java applications, allows an attacker to execute arbitrary code by compromising an existing logback configuration file or by injecting an environment variable before program execution.\n\n\n\nA successful attack requires the presence of Janino library and Spring Framework to be present on the user's class path. In addition, the attacker must\u00a0 have write access to a \nconfiguration file. Alternatively, the attacker could inject a malicious \nenvironment variable pointing to a malicious configuration file. In both \ncases, the attack requires existing privilege.",
+                "markdown": "**Vulnerability CVE-2025-11226**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|ch.qos.logback:logback-core|1.5.19, 1.3.16|[CVE-2025-11226](https://avd.aquasec.com/nvd/cve-2025-11226)|\n\nACE vulnerability in conditional configuration file processing  by QOS.CH logback-core up to and including version 1.5.18 in Java applications, allows an attacker to execute arbitrary code by compromising an existing logback configuration file or by injecting an environment variable before program execution.\n\n\n\nA successful attack requires the presence of Janino library and Spring Framework to be present on the user's class path. In addition, the attacker must\u00a0 have write access to a \nconfiguration file. Alternatively, the attacker could inject a malicious \nenvironment variable pointing to a malicious configuration file. In both \ncases, the attack requires existing privilege."
+              },
+              "properties": {
+                "cvssv40_baseScore": 5.9,
+                "cvssv40_vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:P/VC:H/VI:L/VA:L/SC:H/SI:L/SA:L",
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-12801",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "logback-core: SaxEventRecorder vulnerable to Server-Side Request Forgery (SSRF) attacks"
+              },
+              "fullDescription": {
+                "text": "Server-Side Request Forgery (SSRF) in SaxEventRecorder by QOS.CH logback version 0.1 to 1.3.14 and 1.4.0 to 1.5.12\u00a0 on the Java platform, allows an attacker to \nforge requests by compromising logback configuration files in XML.\n\n\n\nThe attacks involves the modification of DOCTYPE declaration in\u00a0 XML configuration files."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-12801",
+              "help": {
+                "text": "Vulnerability CVE-2024-12801\nSeverity: LOW\nPackage: ch.qos.logback:logback-core\nFixed Version: 1.5.13, 1.3.15\nLink: [CVE-2024-12801](https://avd.aquasec.com/nvd/cve-2024-12801)\nServer-Side Request Forgery (SSRF) in SaxEventRecorder by QOS.CH logback version 0.1 to 1.3.14 and 1.4.0 to 1.5.12\u00a0 on the Java platform, allows an attacker to \nforge requests by compromising logback configuration files in XML.\n\n\n\nThe attacks involves the modification of DOCTYPE declaration in\u00a0 XML configuration files.",
+                "markdown": "**Vulnerability CVE-2024-12801**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|ch.qos.logback:logback-core|1.5.13, 1.3.15|[CVE-2024-12801](https://avd.aquasec.com/nvd/cve-2024-12801)|\n\nServer-Side Request Forgery (SSRF) in SaxEventRecorder by QOS.CH logback version 0.1 to 1.3.14 and 1.4.0 to 1.5.12\u00a0 on the Java platform, allows an attacker to \nforge requests by compromising logback configuration files in XML.\n\n\n\nThe attacks involves the modification of DOCTYPE declaration in\u00a0 XML configuration files."
+              },
+              "properties": {
+                "cvssv40_baseScore": 2.4,
+                "cvssv40_vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:L/VI:N/VA:L/SC:H/SI:H/SA:H/V:D/U:Clear",
+                "precision": "very-high",
+                "security-severity": "2.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2026-1225",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "ch.qos.logback/logback-core: Malicious logback.xml configuration file allows instantiation of arbitrary classes"
+              },
+              "fullDescription": {
+                "text": "ACE vulnerability in configuration file processing  by QOS.CH logback-core up to and including version 1.5.24 in Java applications, allows an attacker to instantiate classes already present on the class path by compromising an existing logback configuration file.\n\n\n\n\nThe instantiation of a potentially malicious Java class requires that said class is present on the user's class-path. In addition, the attacker must  have write access to a \nconfiguration file. However, after successful instantiation, the instance is very likely to be discarded with no further ado."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2026-1225",
+              "help": {
+                "text": "Vulnerability CVE-2026-1225\nSeverity: LOW\nPackage: ch.qos.logback:logback-core\nFixed Version: 1.5.25\nLink: [CVE-2026-1225](https://avd.aquasec.com/nvd/cve-2026-1225)\nACE vulnerability in configuration file processing  by QOS.CH logback-core up to and including version 1.5.24 in Java applications, allows an attacker to instantiate classes already present on the class path by compromising an existing logback configuration file.\n\n\n\n\nThe instantiation of a potentially malicious Java class requires that said class is present on the user's class-path. In addition, the attacker must  have write access to a \nconfiguration file. However, after successful instantiation, the instance is very likely to be discarded with no further ado.",
+                "markdown": "**Vulnerability CVE-2026-1225**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|ch.qos.logback:logback-core|1.5.25|[CVE-2026-1225](https://avd.aquasec.com/nvd/cve-2026-1225)|\n\nACE vulnerability in configuration file processing  by QOS.CH logback-core up to and including version 1.5.24 in Java applications, allows an attacker to instantiate classes already present on the class path by compromising an existing logback configuration file.\n\n\n\n\nThe instantiation of a potentially malicious Java class requires that said class is present on the user's class-path. In addition, the attacker must  have write access to a \nconfiguration file. However, after successful instantiation, the instance is very likely to be discarded with no further ado."
+              },
+              "properties": {
+                "cvssv40_baseScore": 1.8,
+                "cvssv40_vector": "CVSS:4.0/AV:L/AC:H/AT:P/PR:H/UI:N/VC:L/VI:L/VA:L/SC:L/SI:L/SA:L",
+                "precision": "very-high",
+                "security-severity": "2.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-2976",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "guava: insecure temporary directory creation"
+              },
+              "fullDescription": {
+                "text": "Use of Java's default temporary directory for file creation in `FileBackedOutputStream` in Google Guava versions 1.0 to 31.1 on Unix systems and Android Ice Cream Sandwich allows other users and apps on the machine with access to the default Java temporary directory to be able to access the files created by the class.\n\nEven though the security vulnerability is fixed in version 32.0.0, we recommend using version 32.0.1 as version 32.0.0 breaks some functionality under Windows."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-2976",
+              "help": {
+                "text": "Vulnerability CVE-2023-2976\nSeverity: MEDIUM\nPackage: com.google.guava:guava\nFixed Version: 32.0.0-android\nLink: [CVE-2023-2976](https://avd.aquasec.com/nvd/cve-2023-2976)\nUse of Java's default temporary directory for file creation in `FileBackedOutputStream` in Google Guava versions 1.0 to 31.1 on Unix systems and Android Ice Cream Sandwich allows other users and apps on the machine with access to the default Java temporary directory to be able to access the files created by the class.\n\nEven though the security vulnerability is fixed in version 32.0.0, we recommend using version 32.0.1 as version 32.0.0 breaks some functionality under Windows.",
+                "markdown": "**Vulnerability CVE-2023-2976**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|com.google.guava:guava|32.0.0-android|[CVE-2023-2976](https://avd.aquasec.com/nvd/cve-2023-2976)|\n\nUse of Java's default temporary directory for file creation in `FileBackedOutputStream` in Google Guava versions 1.0 to 31.1 on Unix systems and Android Ice Cream Sandwich allows other users and apps on the machine with access to the default Java temporary directory to be able to access the files created by the class.\n\nEven though the security vulnerability is fixed in version 32.0.0, we recommend using version 32.0.1 as version 32.0.0 breaks some functionality under Windows."
+              },
+              "properties": {
+                "cvssv3_baseScore": 5.5,
+                "cvssv3_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2020-8908",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "guava: local information disclosure via temporary directory created with unsafe permissions"
+              },
+              "fullDescription": {
+                "text": "A temp directory creation vulnerability exists in all versions of Guava, allowing an attacker with access to the machine to potentially access data in a temporary directory created by the Guava API com.google.common.io.Files.createTempDir(). By default, on unix-like systems, the created directory is world-readable (readable by an attacker with access to the system). The method in question has been marked @Deprecated in versions 30.0 and later and should not be used. For Android developers, we recommend choosing a temporary directory API provided by Android, such as context.getCacheDir(). For other Java developers, we recommend migrating to the Java 7 API java.nio.file.Files.createTempDirectory() which explicitly configures permissions of 700, or configuring the Java runtime's java.io.tmpdir system property to point to a location whose permissions are appropriately configured."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2020-8908",
+              "help": {
+                "text": "Vulnerability CVE-2020-8908\nSeverity: LOW\nPackage: com.google.guava:guava\nFixed Version: 32.0.0-android\nLink: [CVE-2020-8908](https://avd.aquasec.com/nvd/cve-2020-8908)\nA temp directory creation vulnerability exists in all versions of Guava, allowing an attacker with access to the machine to potentially access data in a temporary directory created by the Guava API com.google.common.io.Files.createTempDir(). By default, on unix-like systems, the created directory is world-readable (readable by an attacker with access to the system). The method in question has been marked @Deprecated in versions 30.0 and later and should not be used. For Android developers, we recommend choosing a temporary directory API provided by Android, such as context.getCacheDir(). For other Java developers, we recommend migrating to the Java 7 API java.nio.file.Files.createTempDirectory() which explicitly configures permissions of 700, or configuring the Java runtime's java.io.tmpdir system property to point to a location whose permissions are appropriately configured.",
+                "markdown": "**Vulnerability CVE-2020-8908**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|com.google.guava:guava|32.0.0-android|[CVE-2020-8908](https://avd.aquasec.com/nvd/cve-2020-8908)|\n\nA temp directory creation vulnerability exists in all versions of Guava, allowing an attacker with access to the machine to potentially access data in a temporary directory created by the Guava API com.google.common.io.Files.createTempDir(). By default, on unix-like systems, the created directory is world-readable (readable by an attacker with access to the system). The method in question has been marked @Deprecated in versions 30.0 and later and should not be used. For Android developers, we recommend choosing a temporary directory API provided by Android, such as context.getCacheDir(). For other Java developers, we recommend migrating to the Java 7 API java.nio.file.Files.createTempDirectory() which explicitly configures permissions of 700, or configuring the Java runtime's java.io.tmpdir system property to point to a location whose permissions are appropriately configured."
+              },
+              "properties": {
+                "cvssv3_baseScore": 3.3,
+                "cvssv3_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+                "precision": "very-high",
+                "security-severity": "3.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-12183",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "lz4-java: lz4-java: Out-of-bounds memory operations lead to denial of service and information disclosure"
+              },
+              "fullDescription": {
+                "text": "Out-of-bounds memory operations in org.lz4:lz4-java 1.8.0 and earlier allow remote attackers to cause denial of service and read adjacent memory via untrusted compressed input."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2025-12183",
+              "help": {
+                "text": "Vulnerability CVE-2025-12183\nSeverity: HIGH\nPackage: org.lz4:lz4-java\nFixed Version: 1.8.1\nLink: [CVE-2025-12183](https://avd.aquasec.com/nvd/cve-2025-12183)\nOut-of-bounds memory operations in org.lz4:lz4-java 1.8.0 and earlier allow remote attackers to cause denial of service and read adjacent memory via untrusted compressed input.",
+                "markdown": "**Vulnerability CVE-2025-12183**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|org.lz4:lz4-java|1.8.1|[CVE-2025-12183](https://avd.aquasec.com/nvd/cve-2025-12183)|\n\nOut-of-bounds memory operations in org.lz4:lz4-java 1.8.0 and earlier allow remote attackers to cause denial of service and read adjacent memory via untrusted compressed input."
+              },
+              "properties": {
+                "cvssv40_baseScore": 8.8,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:H/SC:N/SI:N/SA:N",
+                "precision": "very-high",
+                "security-severity": "8.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-66566",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "lz4-java: lz4-java: Information Disclosure via Insufficient Output Buffer Clearing"
+              },
+              "fullDescription": {
+                "text": "yawkat LZ4 Java provides LZ4 compression for Java. Insufficient clearing of the output buffer in Java-based decompressor implementations in lz4-java 1.10.0 and earlier allows remote attackers to read previous buffer contents via crafted compressed input. In applications where the output buffer is reused without being cleared, this may lead to disclosure of sensitive data. JNI-based implementations are not affected. This vulnerability is fixed in 1.10.1."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2025-66566",
+              "help": {
+                "text": "Vulnerability CVE-2025-66566\nSeverity: HIGH\nPackage: org.lz4:lz4-java\nFixed Version: \nLink: [CVE-2025-66566](https://avd.aquasec.com/nvd/cve-2025-66566)\nyawkat LZ4 Java provides LZ4 compression for Java. Insufficient clearing of the output buffer in Java-based decompressor implementations in lz4-java 1.10.0 and earlier allows remote attackers to read previous buffer contents via crafted compressed input. In applications where the output buffer is reused without being cleared, this may lead to disclosure of sensitive data. JNI-based implementations are not affected. This vulnerability is fixed in 1.10.1.",
+                "markdown": "**Vulnerability CVE-2025-66566**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|org.lz4:lz4-java||[CVE-2025-66566](https://avd.aquasec.com/nvd/cve-2025-66566)|\n\nyawkat LZ4 Java provides LZ4 compression for Java. Insufficient clearing of the output buffer in Java-based decompressor implementations in lz4-java 1.10.0 and earlier allows remote attackers to read previous buffer contents via crafted compressed input. In applications where the output buffer is reused without being cleared, this may lead to disclosure of sensitive data. JNI-based implementations are not affected. This vulnerability is fixed in 1.10.1."
+              },
+              "properties": {
+                "cvssv40_baseScore": 8.2,
+                "cvssv40_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+                "precision": "very-high",
+                "security-severity": "8.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            }
+          ],
+          "version": "0.69.3"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "CVE-2024-29992",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Package: Azure.Identity\nInstalled Version: 1.10.3\nVulnerability CVE-2024-29992\nSeverity: MEDIUM\nFixed Version: 1.11.0\nLink: [CVE-2024-29992](https://avd.aquasec.com/nvd/cve-2024-29992)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/bin/Debug/net8.0/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 814,
+                  "startColumn": 1,
+                  "endLine": 820,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/bin/Debug/net8.0/SastEval.deps.json: Azure.Identity@1.10.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-35255",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Package: Azure.Identity\nInstalled Version: 1.10.3\nVulnerability CVE-2024-35255\nSeverity: MEDIUM\nFixed Version: 1.11.4\nLink: [CVE-2024-35255](https://avd.aquasec.com/nvd/cve-2024-35255)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/bin/Debug/net8.0/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 814,
+                  "startColumn": 1,
+                  "endLine": 820,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/bin/Debug/net8.0/SastEval.deps.json: Azure.Identity@1.10.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-25543",
+          "ruleIndex": 2,
+          "level": "warning",
+          "message": {
+            "text": "Package: HtmlSanitizer\nInstalled Version: 8.0.865\nVulnerability CVE-2026-25543\nSeverity: MEDIUM\nFixed Version: 9.0.892, 9.1.893-beta\nLink: [CVE-2026-25543](https://avd.aquasec.com/nvd/cve-2026-25543)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/bin/Debug/net8.0/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 828,
+                  "startColumn": 1,
+                  "endLine": 834,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/bin/Debug/net8.0/SastEval.deps.json: HtmlSanitizer@8.0.865"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-55247",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Package: Microsoft.Build\nInstalled Version: 17.14.8\nVulnerability CVE-2025-55247\nSeverity: HIGH\nFixed Version: 18.0.0-preview-25476-107, 17.14.28, 17.12.50, 17.11.48, 17.10.46, 17.8.43\nLink: [CVE-2025-55247](https://avd.aquasec.com/nvd/cve-2025-55247)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/bin/Debug/net8.0/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 842,
+                  "startColumn": 1,
+                  "endLine": 848,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/bin/Debug/net8.0/SastEval.deps.json: Microsoft.Build@17.14.8"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-35255",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Package: Microsoft.Identity.Client\nInstalled Version: 4.56.0\nVulnerability CVE-2024-35255\nSeverity: MEDIUM\nFixed Version: 4.60.4, 4.61.3\nLink: [CVE-2024-35255](https://avd.aquasec.com/nvd/cve-2024-35255)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/bin/Debug/net8.0/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 877,
+                  "startColumn": 1,
+                  "endLine": 883,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/bin/Debug/net8.0/SastEval.deps.json: Microsoft.Identity.Client@4.56.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-27086",
+          "ruleIndex": 4,
+          "level": "note",
+          "message": {
+            "text": "Package: Microsoft.Identity.Client\nInstalled Version: 4.56.0\nVulnerability CVE-2024-27086\nSeverity: LOW\nFixed Version: 4.59.1, 4.60.3\nLink: [CVE-2024-27086](https://avd.aquasec.com/nvd/cve-2024-27086)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/bin/Debug/net8.0/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 877,
+                  "startColumn": 1,
+                  "endLine": 883,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/bin/Debug/net8.0/SastEval.deps.json: Microsoft.Identity.Client@4.56.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-0057",
+          "ruleIndex": 5,
+          "level": "error",
+          "message": {
+            "text": "Package: NuGet.Packaging\nInstalled Version: 6.8.0\nVulnerability CVE-2024-0057\nSeverity: CRITICAL\nFixed Version: 5.11.6, 6.0.6, 6.3.4, 6.4.3, 6.6.2, 6.7.1, 6.8.1\nLink: [CVE-2024-0057](https://avd.aquasec.com/nvd/cve-2024-0057)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/bin/Debug/net8.0/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1003,
+                  "startColumn": 1,
+                  "endLine": 1009,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/bin/Debug/net8.0/SastEval.deps.json: NuGet.Packaging@6.8.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-0056",
+          "ruleIndex": 6,
+          "level": "error",
+          "message": {
+            "text": "Package: System.Data.SqlClient\nInstalled Version: 4.8.1\nVulnerability CVE-2024-0056\nSeverity: HIGH\nFixed Version: 4.8.6\nLink: [CVE-2024-0056](https://avd.aquasec.com/nvd/cve-2024-0056)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/bin/Debug/net8.0/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1087,
+                  "startColumn": 1,
+                  "endLine": 1093,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/bin/Debug/net8.0/SastEval.deps.json: System.Data.SqlClient@4.8.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-41064",
+          "ruleIndex": 7,
+          "level": "warning",
+          "message": {
+            "text": "Package: System.Data.SqlClient\nInstalled Version: 4.8.1\nVulnerability CVE-2022-41064\nSeverity: MEDIUM\nFixed Version: 4.8.5\nLink: [CVE-2022-41064](https://avd.aquasec.com/nvd/cve-2022-41064)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/bin/Debug/net8.0/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1087,
+                  "startColumn": 1,
+                  "endLine": 1093,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/bin/Debug/net8.0/SastEval.deps.json: System.Data.SqlClient@4.8.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-29992",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Package: Azure.Identity\nInstalled Version: 1.10.3\nVulnerability CVE-2024-29992\nSeverity: MEDIUM\nFixed Version: 1.11.0\nLink: [CVE-2024-29992](https://avd.aquasec.com/nvd/cve-2024-29992)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/publish/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 814,
+                  "startColumn": 1,
+                  "endLine": 820,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/publish/SastEval.deps.json: Azure.Identity@1.10.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-35255",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Package: Azure.Identity\nInstalled Version: 1.10.3\nVulnerability CVE-2024-35255\nSeverity: MEDIUM\nFixed Version: 1.11.4\nLink: [CVE-2024-35255](https://avd.aquasec.com/nvd/cve-2024-35255)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/publish/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 814,
+                  "startColumn": 1,
+                  "endLine": 820,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/publish/SastEval.deps.json: Azure.Identity@1.10.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-25543",
+          "ruleIndex": 2,
+          "level": "warning",
+          "message": {
+            "text": "Package: HtmlSanitizer\nInstalled Version: 8.0.865\nVulnerability CVE-2026-25543\nSeverity: MEDIUM\nFixed Version: 9.0.892, 9.1.893-beta\nLink: [CVE-2026-25543](https://avd.aquasec.com/nvd/cve-2026-25543)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/publish/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 828,
+                  "startColumn": 1,
+                  "endLine": 834,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/publish/SastEval.deps.json: HtmlSanitizer@8.0.865"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-55247",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Package: Microsoft.Build\nInstalled Version: 17.14.8\nVulnerability CVE-2025-55247\nSeverity: HIGH\nFixed Version: 18.0.0-preview-25476-107, 17.14.28, 17.12.50, 17.11.48, 17.10.46, 17.8.43\nLink: [CVE-2025-55247](https://avd.aquasec.com/nvd/cve-2025-55247)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/publish/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 842,
+                  "startColumn": 1,
+                  "endLine": 848,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/publish/SastEval.deps.json: Microsoft.Build@17.14.8"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-35255",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Package: Microsoft.Identity.Client\nInstalled Version: 4.56.0\nVulnerability CVE-2024-35255\nSeverity: MEDIUM\nFixed Version: 4.60.4, 4.61.3\nLink: [CVE-2024-35255](https://avd.aquasec.com/nvd/cve-2024-35255)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/publish/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 877,
+                  "startColumn": 1,
+                  "endLine": 883,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/publish/SastEval.deps.json: Microsoft.Identity.Client@4.56.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-27086",
+          "ruleIndex": 4,
+          "level": "note",
+          "message": {
+            "text": "Package: Microsoft.Identity.Client\nInstalled Version: 4.56.0\nVulnerability CVE-2024-27086\nSeverity: LOW\nFixed Version: 4.59.1, 4.60.3\nLink: [CVE-2024-27086](https://avd.aquasec.com/nvd/cve-2024-27086)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/publish/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 877,
+                  "startColumn": 1,
+                  "endLine": 883,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/publish/SastEval.deps.json: Microsoft.Identity.Client@4.56.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-0057",
+          "ruleIndex": 5,
+          "level": "error",
+          "message": {
+            "text": "Package: NuGet.Packaging\nInstalled Version: 6.8.0\nVulnerability CVE-2024-0057\nSeverity: CRITICAL\nFixed Version: 5.11.6, 6.0.6, 6.3.4, 6.4.3, 6.6.2, 6.7.1, 6.8.1\nLink: [CVE-2024-0057](https://avd.aquasec.com/nvd/cve-2024-0057)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/publish/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1003,
+                  "startColumn": 1,
+                  "endLine": 1009,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/publish/SastEval.deps.json: NuGet.Packaging@6.8.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-0056",
+          "ruleIndex": 6,
+          "level": "error",
+          "message": {
+            "text": "Package: System.Data.SqlClient\nInstalled Version: 4.8.1\nVulnerability CVE-2024-0056\nSeverity: HIGH\nFixed Version: 4.8.6\nLink: [CVE-2024-0056](https://avd.aquasec.com/nvd/cve-2024-0056)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/publish/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1087,
+                  "startColumn": 1,
+                  "endLine": 1093,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/publish/SastEval.deps.json: System.Data.SqlClient@4.8.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-41064",
+          "ruleIndex": 7,
+          "level": "warning",
+          "message": {
+            "text": "Package: System.Data.SqlClient\nInstalled Version: 4.8.1\nVulnerability CVE-2022-41064\nSeverity: MEDIUM\nFixed Version: 4.8.5\nLink: [CVE-2022-41064](https://avd.aquasec.com/nvd/cve-2022-41064)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dotnet/publish/SastEval.deps.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1087,
+                  "startColumn": 1,
+                  "endLine": 1093,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "dotnet/publish/SastEval.deps.json: System.Data.SqlClient@4.8.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-12798",
+          "ruleIndex": 8,
+          "level": "warning",
+          "message": {
+            "text": "Package: ch.qos.logback:logback-core\nInstalled Version: 1.5.6\nVulnerability CVE-2024-12798\nSeverity: MEDIUM\nFixed Version: 1.5.13, 1.3.15\nLink: [CVE-2024-12798](https://avd.aquasec.com/nvd/cve-2024-12798)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "java/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 77,
+                  "startColumn": 1,
+                  "endLine": 81,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "java/pom.xml: ch.qos.logback:logback-core@1.5.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-11226",
+          "ruleIndex": 9,
+          "level": "warning",
+          "message": {
+            "text": "Package: ch.qos.logback:logback-core\nInstalled Version: 1.5.6\nVulnerability CVE-2025-11226\nSeverity: MEDIUM\nFixed Version: 1.5.19, 1.3.16\nLink: [CVE-2025-11226](https://avd.aquasec.com/nvd/cve-2025-11226)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "java/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 77,
+                  "startColumn": 1,
+                  "endLine": 81,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "java/pom.xml: ch.qos.logback:logback-core@1.5.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-12801",
+          "ruleIndex": 10,
+          "level": "note",
+          "message": {
+            "text": "Package: ch.qos.logback:logback-core\nInstalled Version: 1.5.6\nVulnerability CVE-2024-12801\nSeverity: LOW\nFixed Version: 1.5.13, 1.3.15\nLink: [CVE-2024-12801](https://avd.aquasec.com/nvd/cve-2024-12801)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "java/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 77,
+                  "startColumn": 1,
+                  "endLine": 81,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "java/pom.xml: ch.qos.logback:logback-core@1.5.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2026-1225",
+          "ruleIndex": 11,
+          "level": "note",
+          "message": {
+            "text": "Package: ch.qos.logback:logback-core\nInstalled Version: 1.5.6\nVulnerability CVE-2026-1225\nSeverity: LOW\nFixed Version: 1.5.25\nLink: [CVE-2026-1225](https://avd.aquasec.com/nvd/cve-2026-1225)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "java/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 77,
+                  "startColumn": 1,
+                  "endLine": 81,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "java/pom.xml: ch.qos.logback:logback-core@1.5.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-2976",
+          "ruleIndex": 12,
+          "level": "warning",
+          "message": {
+            "text": "Package: com.google.guava:guava\nInstalled Version: 30.1-jre\nVulnerability CVE-2023-2976\nSeverity: MEDIUM\nFixed Version: 32.0.0-android\nLink: [CVE-2023-2976](https://avd.aquasec.com/nvd/cve-2023-2976)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "java/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "java/pom.xml: com.google.guava:guava@30.1-jre"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-8908",
+          "ruleIndex": 13,
+          "level": "note",
+          "message": {
+            "text": "Package: com.google.guava:guava\nInstalled Version: 30.1-jre\nVulnerability CVE-2020-8908\nSeverity: LOW\nFixed Version: 32.0.0-android\nLink: [CVE-2020-8908](https://avd.aquasec.com/nvd/cve-2020-8908)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "java/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "java/pom.xml: com.google.guava:guava@30.1-jre"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-12183",
+          "ruleIndex": 14,
+          "level": "error",
+          "message": {
+            "text": "Package: org.lz4:lz4-java\nInstalled Version: 1.8.0\nVulnerability CVE-2025-12183\nSeverity: HIGH\nFixed Version: 1.8.1\nLink: [CVE-2025-12183](https://avd.aquasec.com/nvd/cve-2025-12183)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "java/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 91,
+                  "startColumn": 1,
+                  "endLine": 95,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "java/pom.xml: org.lz4:lz4-java@1.8.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-66566",
+          "ruleIndex": 15,
+          "level": "error",
+          "message": {
+            "text": "Package: org.lz4:lz4-java\nInstalled Version: 1.8.0\nVulnerability CVE-2025-66566\nSeverity: HIGH\nFixed Version: \nLink: [CVE-2025-66566](https://avd.aquasec.com/nvd/cve-2025-66566)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "java/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 91,
+                  "startColumn": 1,
+                  "endLine": 95,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "java/pom.xml: org.lz4:lz4-java@1.8.0"
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits",
+      "originalUriBaseIds": {
+        "ROOTPATH": {
+          "uri": "file:///sasteval/"
+        }
+      }
+    }
+  ]
+}

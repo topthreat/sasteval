@@ -1,13 +1,9 @@
 # Intentional Vulnerabilities
 
-> **This file documents every intentional vulnerability and true-negative seed in the
-> sasteval benchmark. Use this as a reference when comparing scanner results.**
->
-> **Total findings: 106** (72 SAST True Positives + 30 True Negatives + 4 SCA)
->
-> See [docs/tooling-validation.md](docs/tooling-validation.md) for benchmark-fidelity notes,
-> including which findings are strong cross-tool signals and which are intentionally
-> broader or currently need advisory-specific correction.
+106 total findings: 72 SAST true positives, 30 true negatives, 4 SCA.
+
+See [docs/tooling-validation.md](docs/tooling-validation.md) for notes on which findings
+are strong cross-tool signals and which are business-logic dependent.
 
 ## SAST Vulnerabilities (True Positives)
 

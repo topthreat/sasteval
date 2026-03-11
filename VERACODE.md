@@ -6,8 +6,8 @@ Users do not need to install Java, Maven, or .NET to submit this benchmark to Ve
 
 Use these files:
 
-- [veracode/sasteval-java-1.0.0.war](/home/tallenz/code/sasteval/veracode/sasteval-java-1.0.0.war)
-- [veracode/sasteval-dotnet-net8-debug.zip](/home/tallenz/code/sasteval/veracode/sasteval-dotnet-net8-debug.zip)
+- [veracode/sasteval-java-1.0.0.war](veracode/sasteval-java-1.0.0.war)
+- [veracode/sasteval-dotnet-net8-debug.zip](veracode/sasteval-dotnet-net8-debug.zip)
 
 ## What Veracode Requires
 
@@ -43,7 +43,7 @@ Use these steps if you do not want users to install any local Veracode tooling.
 2. Open the `sasteval-java` application profile, or create it if needed.
 3. Select `Start a Scan > Start a Static Scan`.
 4. Optionally edit the scan name and Auto-Scan setting.
-5. Upload [veracode/sasteval-java-1.0.0.war](/home/tallenz/code/sasteval/veracode/sasteval-java-1.0.0.war).
+5. Upload [veracode/sasteval-java-1.0.0.war](veracode/sasteval-java-1.0.0.war).
 6. After prescan, review the selected modules if Auto-Scan is off.
 7. Start the scan, or let Auto-Scan continue automatically.
 
@@ -53,7 +53,7 @@ Use these steps if you do not want users to install any local Veracode tooling.
 2. Open the `sasteval-dotnet` application profile, or create it if needed.
 3. Select `Start a Scan > Start a Static Scan`.
 4. Optionally edit the scan name and Auto-Scan setting.
-5. Upload [veracode/sasteval-dotnet-net8-debug.zip](/home/tallenz/code/sasteval/veracode/sasteval-dotnet-net8-debug.zip).
+5. Upload [veracode/sasteval-dotnet-net8-debug.zip](veracode/sasteval-dotnet-net8-debug.zip).
 6. After prescan, review the selected modules if Auto-Scan is off.
 7. Start the scan, or let Auto-Scan continue automatically.
 
